@@ -1,0 +1,6 @@
+bitsandbytes
+bs4
+accelerate
+scipy
+transformers
+torch
