@@ -1,7 +1,5 @@
 FROM nvidia/cuda:12.2.0-devel-ubuntu22.04
 
-WORKDIR /dev
-
 RUN apt-get update && \
     apt-get install -y git wget cmake && \
     git clone --recursive https://github.com/go-skynet/go-llama.cpp.git
@@ -15,3 +13,5 @@ RUN wget https://golang.org/dl/go1.21.1.linux-amd64.tar.gz && \
 
 ENV GOPATH=/go
 ENV PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+WORKDIR /dev
